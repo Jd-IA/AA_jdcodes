@@ -5,6 +5,7 @@
  */
 package aa20201;
 
+import busquedas.BusquedaSecuencial;
 import busquedas.GeneradorDatos;
 import busquedas.Busquedas;
 
@@ -18,14 +19,30 @@ public class AA20201 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
         
-        int[] aux = GeneradorDatos.generarArregloInt(8, 10, 10);
-        int aux2 = Busquedas.busquedaLineal(aux, 8);
-        for(int i: aux){
-            System.out.println(i);
+        int limite = 100000000;
+        int[] aux;
+        int[] tiempos = new int[limite];
+        BusquedaSecuencial b1 = new BusquedaSecuencial();
+        for (int j = 0; j < limite; j++){
+            aux = GeneradorDatos.generarArregloIntPeorCaso(6, j+1, 1000);
+            int pos = b1.buscar(aux, 6);
+            tiempos[j] = (int) b1.gettTotal();
+            System.out.println("j= "+j+" :"+tiempos[j]);
         }
-        System.out.println("La posicion es: "+aux2);
+        
+        // grafica y le mandan tiempos
+        
+        
+        
+       
+     
+        // Guardar los tiempos
+        
+           
+        
+        
+        System.out.println("T: "+b1.gettTotal()+"");
     }
     
 }
