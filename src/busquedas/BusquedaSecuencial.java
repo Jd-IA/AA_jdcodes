@@ -12,7 +12,7 @@ import busquedas.Busquedas;
  * @author working
  */
 public class BusquedaSecuencial {
-    //
+    
    
     public long tInicio;
     public long tFinal;
