@@ -10,7 +10,7 @@ package ordenamiento;
  * @author working
  */
 public class Burbuja {
-     
+     //
    
     public long tInicio;
     public long tFinal;

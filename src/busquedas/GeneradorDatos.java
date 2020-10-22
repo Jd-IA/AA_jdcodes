@@ -12,7 +12,7 @@ import java.util.Random;
  * @author JD
  */
 public class GeneradorDatos {
-    
+   //
     // "aleatorio"
     public static int[] generarArregloInt(int x, int dim, int bound){
         int[] arreglo = new int[dim];

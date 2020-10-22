@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package aa20201;
-
+//
 import aa20201.data.Grafica;
 import busquedas.BusquedaSecuencial;
 import busquedas.GeneradorDatos;
@@ -78,7 +78,7 @@ public class AA20201 {
         //System.out.println("T: "+b1.gettTotal()+"");
         
         // Guardar los tiempos              
-        int n = 10000;
+        int n = 500;
         int[] aux;
 
         double[] tiempos = new double[n];

@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package aa20201.data;
-
+//
 import java.awt.BasicStroke;
 import java.awt.Color;
 import org.jfree.chart.ChartFactory;

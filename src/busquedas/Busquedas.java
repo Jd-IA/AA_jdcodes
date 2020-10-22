@@ -10,7 +10,7 @@ package busquedas;
  * @author JD
  */
 public class Busquedas {
-    
+    //
     public static int busquedaLinealJD (int[] datos, int x){
     boolean flag=false;
     int i=0;
