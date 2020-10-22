@@ -77,22 +77,35 @@ public class AA20201 {
                 
         //System.out.println("T: "+b1.gettTotal()+"");
         
-        // Guardar los tiempos
-              
-                int n = 20;
+        // Guardar los tiempos              
+        int n = 10000;
         int[] aux;
+
         double[] tiempos = new double[n];
+        double[] tiempos2 = new double[n];
+
         Burbuja b = new Burbuja();
+        
+//       aux = GeneradorDatos.generarArregloPeor(n,1000);
+        //b.ordenar(aux);
+       
         // complejidad algoritmica Sumatoria ( Generar los datos aleatorios + busqueda + almacenar el tiempo)
         for (int j = 0; j < n; j++){
-            aux = GeneradorDatos.generarArregloInt(j,1000);
+            aux = GeneradorDatos.generarArregloPeor(j,1000);
             b.ordenar(aux);
             tiempos[j] = (int) b.gettTotal();
-            //System.out.println("j= "+j+" :"+tiempos[j]);
+            System.out.println();
+        }  
+         for (int j = 0; j < n; j++){
+            aux = GeneradorDatos.generarArregloMejor(j,1000);
+            b.ordenar(aux);
+            tiempos2[j] = (int) b.gettTotal();
+            System.out.println();
         }  
         System.out.println();
         Grafica g1 = new Grafica("N","Tiempo","Tiempos");
         g1.agregarSerie("t1",tiempos);
+        g1.agregarSerie("t2",tiempos2);
         g1.crearGrafica();
         g1.muestraGrafica();
        

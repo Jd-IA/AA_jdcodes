@@ -42,6 +42,13 @@ public class Burbuja {
 
     private void ordenarDatos(int[] datos) {
        // implementar de manera correcta el ordenamiento por burbuja
-    }
-    
+         int i, j, aux;
+         for(i=0;i<datos.length-1;i++)
+              for(j=0;j<datos.length-i-1;j++)
+                   if(datos[j+1]<datos[j]){
+                      aux=datos[j+1];
+                      datos[j+1]=datos[j];
+                      datos[j]=aux;
+                   }
+    }    
 }

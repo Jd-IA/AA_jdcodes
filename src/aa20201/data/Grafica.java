@@ -66,11 +66,11 @@ public class Grafica {
         render.setSeriesPaint(0, Color.RED);
         render.setSeriesPaint(1, Color.BLUE);
         render.setSeriesPaint(2, Color.BLACK);
-        
-        render.setSeriesStroke(0, new BasicStroke(1.0f));
-        render.setSeriesStroke(1, new BasicStroke(1.0f));
-        render.setSeriesStroke(2, new BasicStroke(1.0f));
-
+//        
+//        render.setSeriesStroke(0, new BasicStroke(1.0f));
+//        render.setSeriesStroke(1, new BasicStroke(1.0f));
+//        render.setSeriesStroke(2, new BasicStroke(1.0f));
+//
         plot.setRenderer(render);
     }
     

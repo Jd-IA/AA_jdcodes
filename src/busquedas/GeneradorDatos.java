@@ -70,7 +70,7 @@ public class GeneradorDatos {
         }
         return aux;
     }
-        public static int[] generarArregloInt(int n, int bound){
+    public static int[] generarArregloInt(int n, int bound){
         int[] arreglo = new int[n];
         Random ran = new Random();
      
@@ -78,6 +78,39 @@ public class GeneradorDatos {
             arreglo[y] = ran.nextInt(bound);
         }
         
+       return arreglo;
+    }
+    public static int[] generarArregloMejor(int n, int bound){// 3n+7 "O"=n
+        int[] arreglo = new int[n];//2
+        int totalnum=1;//2
+        for(int y=0; y < n; y++){//3(n)+3
+            arreglo[y] =totalnum;//2
+            totalnum++;//1
+        }
+
+       return arreglo;
+    }
+//    public static int[] generarArregloMedio(int n, int bound){
+//        int[] arreglo = new int[n];
+//        Random ran = new Random();
+//     
+//        for(int y=0; y < n; y++){
+//            arreglo[y] = ran.nextInt(bound);
+//        }
+//        
+//       return arreglo;
+//    }
+    public static int[] generarArregloPeor(int n, int bound){//3n+8 "O"=n
+        int[] arreglo = new int[n];
+        int totalnum=n-1;//19
+//        Random ran = new Random();
+     
+        for(int y=0; y <n; y++){
+            
+            arreglo[y] = totalnum;//19
+            totalnum--;//|8
+        }
+  
        return arreglo;
     }
 }
