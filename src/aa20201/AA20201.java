@@ -10,6 +10,7 @@ import busquedas.BusquedaSecuencial;
 import busquedas.GeneradorDatos;
 import busquedas.Busquedas;
 import ordenamiento.Burbuja;
+import Recu.Fibonnaci;
 
 //import java.awt.BasicStroke;
 //import java.awt.Color;
@@ -77,7 +78,7 @@ public class AA20201 {
                 
         //System.out.println("T: "+b1.gettTotal()+"");
         
-        // Guardar los tiempos              
+        /* Guardar los tiempos      insetshort        
         int n = 500;
         int[] aux;
 
@@ -107,8 +108,40 @@ public class AA20201 {
         g1.agregarSerie("t1",tiempos);
         g1.agregarSerie("t2",tiempos2);
         g1.crearGrafica();
-        g1.muestraGrafica();
+        g1.muestraGrafica();*/
+        
+        
+        
+             //Guardar los tiempos      insetshort        
+        int n = 80;
+
+
+        double[] tiempos = new double[n];
+        double[] tiempos2 = new double[n];
+
+        Fibonnaci b = new Fibonnaci ();
+        
+//       aux = GeneradorDatos.generarArregloPeor(n,1000);
+        //b.ordenar(aux);
        
+        // complejidad algoritmica Sumatoria ( Generar los datos aleatorios + busqueda + almacenar el tiempo)
+        for (int j = 0; j < n; j++){
+
+            b.ordenarFiboNR(n);
+            tiempos[j] = (int) b.gettTotal();
+            System.out.println();
+        }  
+         for (int j = 0; j < n; j++){
+            b.ordenarFiboR(n);
+            tiempos2[j] = (int) b.gettTotal();
+            System.out.println();
+        }  
+        System.out.println();
+        Grafica g1 = new Grafica("N","Tiempo","Tiempos");
+        g1.agregarSerie("t1",tiempos);//no recursivo
+        g1.agregarSerie("t2",tiempos2);//recursivo
+        g1.crearGrafica();
+        g1.muestraGrafica();
      
 
     }
