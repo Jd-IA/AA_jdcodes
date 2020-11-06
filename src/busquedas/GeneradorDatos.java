@@ -80,7 +80,7 @@ public class GeneradorDatos {
         
        return arreglo;
     }
-    public static int[] generarArregloMejor(int n, int bound){// 3n+7 "O"=n
+    public static int[] generarArregloMejor(int n){// 3n+7 "O"=n
         int[] arreglo = new int[n];//2
         int totalnum=1;//2
         for(int y=0; y < n; y++){//3(n)+3
@@ -100,7 +100,7 @@ public class GeneradorDatos {
 //        
 //       return arreglo;
 //    }
-    public static int[] generarArregloPeor(int n, int bound){//3n+8 "O"=n
+    public static int[] generarArregloPeor(int n){//3n+8 "O"=n
         int[] arreglo = new int[n];
         int totalnum=n-1;//19
 //        Random ran = new Random();

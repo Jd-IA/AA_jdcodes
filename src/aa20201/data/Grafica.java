@@ -63,9 +63,9 @@ public class Grafica {
         XYPlot plot= this.grafica.getXYPlot();
         
         XYLineAndShapeRenderer render= new XYLineAndShapeRenderer();
-        render.setSeriesPaint(0, Color.RED);
-        render.setSeriesPaint(1, Color.BLUE);
-        render.setSeriesPaint(2, Color.BLACK);
+        render.setSeriesPaint(0, Color.red);
+        render.setSeriesPaint(1, Color.blue);
+        render.setSeriesPaint(2, Color.black);
 //        
 //        render.setSeriesStroke(0, new BasicStroke(1.0f));
 //        render.setSeriesStroke(1, new BasicStroke(1.0f));
