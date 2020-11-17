@@ -12,6 +12,8 @@ import java.util.Random;
  * @author JD
  */
 public class GeneradorDatos {
+    
+    
    
     // "aleatorio"
     public static int[] generarArregloInt(int x, int dim, int bound){
@@ -70,6 +72,7 @@ public class GeneradorDatos {
         }
         return aux;
     }
+    //Arreglo ramdom
     public static int[] generarArregloInt(int n, int bound){
         int[] arreglo = new int[n];
         Random ran = new Random();
@@ -80,6 +83,9 @@ public class GeneradorDatos {
         
        return arreglo;
     }
+    
+    
+    ///Arreglos
     public static int[] generarArregloMejor(int n){// 3n+7 "O"=n
         int[] arreglo = new int[n];//2
         int totalnum=1;//2
@@ -90,16 +96,24 @@ public class GeneradorDatos {
 
        return arreglo;
     }
-//    public static int[] generarArregloMedio(int n, int bound){
-//        int[] arreglo = new int[n];
-//        Random ran = new Random();
-//     
-//        for(int y=0; y < n; y++){
-//            arreglo[y] = ran.nextInt(bound);
-//        }
-//        
-//       return arreglo;
-//    }
+    public static int[] generarArregloMedio(int n){ //{5,4,3,2,1,6,7,8,9,10}
+        int[] arreglo = new int[n];
+        int tam=n/2;
+        int mitad=n/2;
+        int mitad2=(n/2)+1;
+        for(int y=0; y <tam; y++){
+            arreglo[y] = mitad;
+            mitad--;
+
+        }
+        if(mitad==0){
+            for(int j=tam;j<n;j++){
+                arreglo[j] = mitad2;
+                mitad2++;
+            }
+        }        
+       return arreglo;
+    }
     public static int[] generarArregloPeor(int n){//3n+8 "O"=n
         int[] arreglo = new int[n];
         int totalnum=n-1;//19

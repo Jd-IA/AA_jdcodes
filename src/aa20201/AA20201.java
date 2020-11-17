@@ -11,8 +11,11 @@ import busquedas.GeneradorDatos;
 import busquedas.Busquedas;
 import ordenamiento.Burbuja;
 import Recu.Fibonnaci;
+import java.util.Arrays;
+import ordenamiento.BurbujaOp;
 import ordenamiento.Insert_sort;
 import ordenamiento.Merge_sort;
+import ordenamiento.QuickSort;
 
 //import java.awt.BasicStroke;
 //import java.awt.Color;
@@ -146,46 +149,61 @@ public class AA20201 {
         g1.muestraGrafica();
      */
         
-        int n = 50;
+        int n = 15;
         int[] aux;
 
         double[] tiempos = new double[n];//burbuja
         double[] tiempos2 = new double[n];//inser sort
         double[] tiempos3 = new double[n];// merge sort
         
-        Burbuja b = new Burbuja();
+        BurbujaOp b = new BurbujaOp();
+        
+        Burbuja u = new Burbuja();
+        
+        QuickSort x= new QuickSort();
         
         Insert_sort in = new Insert_sort();
         
         Merge_sort ms = new Merge_sort();
+        
+                    aux = GeneradorDatos.generarArregloMedio(n);
+                    
 
+        
+        
+
+
+//        x.quicksort(aux,0,aux.length - 1);
+        
+         System.out.println("Después de QS: " + Arrays.toString(aux));
+        
        
         // complejidad algoritmica Sumatoria ( Generar los datos aleatorios + busqueda + almacenar el tiempo)
-        for (int j = 0; j < n; j++){
-            aux = GeneradorDatos.generarArregloPeor(j);
-            b.ordenar(aux);
-            tiempos[j] = (int) b.gettTotal();
-            System.out.println();
-        }  
-        for (int j = 0; j < n; j++){
-            aux = GeneradorDatos.generarArregloPeor(j);
-            in.ordenarInSert(aux);
-            tiempos2[j] = (int) in.gettTotal();
-            System.out.println();
-        }  
-        for (int j = 0; j < n; j++){
-            aux = GeneradorDatos.generarArregloPeor(j);
-            ms.ordenar_Merge_sort(aux);
-            tiempos3[j] = (int) ms.gettTotal();
-            System.out.println();
-        } 
-        System.out.println();
-        Grafica g1 = new Grafica("N","Tiempo","Tiempos");
-        g1.agregarSerie("burbuja",tiempos);
-        g1.agregarSerie("Insert",tiempos2);
-        g1.agregarSerie("Merge",tiempos3);
-        g1.crearGrafica();
-        g1.muestraGrafica();
+//        for (int j = 0; j < n; j++){
+//            aux = GeneradorDatos.generarArregloPeor(j);
+//            b.ordenarBop(aux);
+//            tiempos[j] = (int) b.gettTotal();
+//            System.out.println();
+//        }  
+//        for (int j = 0; j < n; j++){
+//            aux = GeneradorDatos.generarArregloPeor(j);
+//            in.ordenarInSert(aux);
+//            tiempos2[j] = (int) in.gettTotal();
+//            System.out.println();
+//        }  
+//        for (int j = 0; j < n; j++){
+//            aux = GeneradorDatos.generarArregloPeor(j);
+//            ms.ordenar_Merge_sort(aux);
+//            tiempos3[j] = (int) ms.gettTotal();
+//            System.out.println();
+//        } 
+//        System.out.println();
+//        Grafica g1 = new Grafica("N","Tiempo","Tiempos");
+//        g1.agregarSerie("burbuja",tiempos);
+//        g1.agregarSerie("Insert",tiempos2);
+//        g1.agregarSerie("Merge",tiempos3);
+//        g1.crearGrafica();
+//        g1.muestraGrafica();
         
 
     }
