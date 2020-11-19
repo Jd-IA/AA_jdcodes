@@ -46,7 +46,7 @@ public class Burbuja {
         return tTotal;
     }
 
-    private void ordenarDatos(int[] datos) {
+    public void ordenarDatos(int[] datos) {
        // implementar de manera correcta el ordenamiento por burbuja
          int i, j, aux;
          for(i=0;i<datos.length-1;i++)

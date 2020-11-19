@@ -149,61 +149,119 @@ public class AA20201 {
         g1.muestraGrafica();
      */
         
-        int n = 15;
+       /* int n = 10000;
         int[] aux;
 
-        double[] tiempos = new double[n];//burbuja
-        double[] tiempos2 = new double[n];//inser sort
-        double[] tiempos3 = new double[n];// merge sort
+//        double[] tiempos = new double[n];//burbuja
+//        double[] tiempos2 = new double[n];//inser sort
+        double[] tiempos3 = new double[n];// merge sort        
+//        double[] tiempos4 = new double[n];//burbuja op
+        double[] tiempos5 = new double[n];// quicksort
         
-        BurbujaOp b = new BurbujaOp();
-        
-        Burbuja u = new Burbuja();
+//        BurbujaOp b = new BurbujaOp();
+//        
+//        Burbuja u = new Burbuja();
         
         QuickSort x= new QuickSort();
         
-        Insert_sort in = new Insert_sort();
+//        Insert_sort in = new Insert_sort();
         
         Merge_sort ms = new Merge_sort();
         
-                    aux = GeneradorDatos.generarArregloMedio(n);
-                    
-
         
-        
-
-
-//        x.quicksort(aux,0,aux.length - 1);
-        
-         System.out.println("Después de QS: " + Arrays.toString(aux));
+//        aux = GeneradorDatos.generarArregloPeor(n);
+//                    
+//        u.ordenar(aux);
+//        
+//       System.out.println("Después de QS: " + Arrays.toString(aux));
         
        
         // complejidad algoritmica Sumatoria ( Generar los datos aleatorios + busqueda + almacenar el tiempo)
-//        for (int j = 0; j < n; j++){
+        
+//        for (int j = 0; j < n; j++){//burbuja
 //            aux = GeneradorDatos.generarArregloPeor(j);
-//            b.ordenarBop(aux);
-//            tiempos[j] = (int) b.gettTotal();
+//            u.ordenar(aux);
+//            tiempos[j] = (int) u.gettTotal();
 //            System.out.println();
 //        }  
-//        for (int j = 0; j < n; j++){
+//        for (int j = 0; j < n; j++){//insertsort
 //            aux = GeneradorDatos.generarArregloPeor(j);
 //            in.ordenarInSert(aux);
 //            tiempos2[j] = (int) in.gettTotal();
 //            System.out.println();
 //        }  
-//        for (int j = 0; j < n; j++){
+        for (int j = 0; j < n; j++){//mergesort
+            aux = GeneradorDatos.generarArregloPeor(j);
+            ms.ordenar_Merge_sort(aux);
+            tiempos3[j] = (int) ms.gettTotal();
+            System.out.println();
+        } 
+//        for (int j = 0; j < n; j++){//burbuja op
 //            aux = GeneradorDatos.generarArregloPeor(j);
-//            ms.ordenar_Merge_sort(aux);
-//            tiempos3[j] = (int) ms.gettTotal();
+//            b.ordenarBop(aux);
+//            tiempos4[j] = (int) b.gettTotal();
 //            System.out.println();
-//        } 
-//        System.out.println();
-//        Grafica g1 = new Grafica("N","Tiempo","Tiempos");
-//        g1.agregarSerie("burbuja",tiempos);
+//        }  
+        for (int j = 0; j < n; j++){//quicksort
+            aux = GeneradorDatos.generarArregloPeor(j);
+            x.ordenarQS(aux);
+            tiempos5[j] = (int) x.gettTotal();
+            System.out.println();
+        } 
+        System.out.println();
+        Grafica g1 = new Grafica("N","Tiempo","Peor");
+//        g1.agregarSerie("Burbuja",tiempos);
 //        g1.agregarSerie("Insert",tiempos2);
-//        g1.agregarSerie("Merge",tiempos3);
-//        g1.crearGrafica();
-//        g1.muestraGrafica();
+        g1.agregarSerie("Merge",tiempos3);
+//        g1.agregarSerie("BurbujaOP",tiempos4);
+        g1.agregarSerie("Quicksort",tiempos5);
+        g1.crearGrafica();
+        g1.muestraGrafica();*/
+        
+        int n = 20;
+
+
+        double[] tiempos = new double[n];//recursivo
+        double[] tiempos2 = new double[n];//recursivodinamico
+        double[] tiempos3 = new double[n];//Iterativo
+        double[] tiempos4 = new double[n];//iterativodinammico
+
+
+        Fibonnaci b = new Fibonnaci ();
+        Fibonnaci b2 = new Fibonnaci ();
+        Fibonnaci b3 = new Fibonnaci ();
+        Fibonnaci b4 = new Fibonnaci ();
+
+
+
+        for (int j = 0; j < n; j++){
+            b.calcularTFiboR(n);//recursivo
+            tiempos[j] = (int) b.gettTotal();
+            System.out.println();
+        }  
+        for (int j = 0; j < n; j++){
+            b2.calcularTFiboRD(n);//recursivo dinamico
+            tiempos2[j] = (int) b2.gettTotal();
+            System.out.println();
+        }  
+        for (int j = 0; j < n; j++){
+            b3.calcularTFiboR(n);//recursivo
+            tiempos3[j] = (int) b3.gettTotal();
+            System.out.println();
+        }  
+        for (int j = 0; j < n; j++){
+            b4.calcularTFiboRD(n);//recursivo dinamico
+            tiempos4[j] = (int) b4.gettTotal();
+            System.out.println();
+        }         
+        System.out.println();
+        Grafica g1 = new Grafica("N","Tiempo","Tiempos");
+        g1.agregarSerie("Recursivo",tiempos);//recursivo
+        g1.agregarSerie("Recursivo D",tiempos2);//recursivoDinamico
+        g1.agregarSerie("Iterativo",tiempos3);//recursivo
+        g1.agregarSerie("Iterativo D",tiempos4);//recursivoDinamico
+        g1.crearGrafica();
+        g1.muestraGrafica();
         
 
     }

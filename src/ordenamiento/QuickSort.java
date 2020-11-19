@@ -23,7 +23,7 @@ public class QuickSort {
   
     public void ordenarQS(int[] datos){
         this.tInicio = System.currentTimeMillis();
-         quicksort(datos,0,(datos.length)-1);
+         quicksort(datos,0,datos.length - 1);
         this.tFinal = System.currentTimeMillis();
         this.tTotal = this.tFinal - this.tInicio;
     }
@@ -39,18 +39,6 @@ public class QuickSort {
     public long gettTotal() {
         return tTotal;
     }
-
-    private void ordenarDatos(int[] datos) {
-       // implementar de manera correcta el ordenamiento por burbuja
-         int i, j, aux;
-         for(i=0;i<datos.length-1;i++)
-              for(j=0;j<datos.length-i-1;j++)
-                   if(datos[j+1]<datos[j]){
-                      aux=datos[j+1];
-                      datos[j+1]=datos[j];
-                      datos[j]=aux;
-                   }
-    }  
     
     private static int particion(int arreglo[], int izquierda, int derecha) {
         int pivote = arreglo[izquierda];

@@ -29,20 +29,32 @@ public class Fibonnaci {
         
     }
     
-    public void ordenarFiboNR(int datos){
+    public void calcularTFiboNR(int datos){
         this.tInicio = System.currentTimeMillis();
         fibonacciNR(datos);
         this.tFinal = System.currentTimeMillis();
         this.tTotal = this.tFinal - this.tInicio;
     }
-    public void ordenarFiboR(int datos){
+    public void calcularTFiboNRD(int datos){
+        this.tInicio = System.currentTimeMillis();
+        fibonacciNRD(datos);
+        this.tFinal = System.currentTimeMillis();
+        this.tTotal = this.tFinal - this.tInicio;
+    }
+    public void calcularTFiboR(int datos){
         this.tInicio = System.currentTimeMillis();
         fibonacciR(datos);
         this.tFinal = System.currentTimeMillis();
         this.tTotal = this.tFinal - this.tInicio;
     }
+    public void calcularTFiboRD(int datos){
+        this.tInicio = System.currentTimeMillis();
+        fibonacciRD(datos);
+        this.tFinal = System.currentTimeMillis();
+        this.tTotal = this.tFinal - this.tInicio;
+    }
     //no recursivo
-    private int fibonacciNR(int n){
+    private int fibonacciNR(int n){//iterativo
         int prev=0, next=1, result=0;
             for (int i = 1; i < n; i++) {
                 result=prev+next;
@@ -51,13 +63,36 @@ public class Fibonnaci {
             }
         return result;
     }
-    private int fibonacciR(int n)  {
-    if(n == 0)
-      return 0;
-    else if(n == 1)
-      return 1;
-    else
-      return fibonacciR(n - 1) + fibonacciR(n - 2);        
+    private int fibonacciNRD(int n){//iterativo dinamico
+        int [] arreglo=new int [45];
+        arreglo[0]=1;
+        arreglo[1]=1;
+        for(int i=2;i<n+1;i++){
+             arreglo[i]=arreglo[i-1] + arreglo[i-2];
+        }
+        return arreglo[n-1];
+    }
+    private int fibonacciR(int n)  {//recursivo
+        if(n == 0)
+            return 0;
+        else if(n == 1)
+            return 1;
+        else
+            return fibonacciR(n - 1) + fibonacciR(n - 2);        
+    }
+    private int fibonacciRD(int n){//recursivo dinamico
+        int [] conocido=new int [45];
+        if(conocido[n]!=0){
+            return conocido[n];
+        }
+        int t=n;
+        if(n<0){
+            return 0;
+        }
+        if(n>1){
+            t=fibonacciRD(n-1)+fibonacciRD(n-2);
+        }
+        return conocido[n]=t;
     }
 
     public int getEnteros() {
