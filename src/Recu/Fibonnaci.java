@@ -50,7 +50,7 @@ public class Fibonnaci {
     public void calcularTFiboRD(int datos){
         this.tInicio = System.currentTimeMillis();
         fibonacciRD(datos);
-        this.tFinal = System.currentTimeMillis();
+        this.tFinal = System.currentTimeMillis(); 
         this.tTotal = this.tFinal - this.tInicio;
     }
     //no recursivo

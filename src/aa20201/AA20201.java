@@ -218,7 +218,7 @@ public class AA20201 {
         g1.crearGrafica();
         g1.muestraGrafica();*/
         
-        int n = 20;
+        int n = 30;
 
 
         double[] tiempos = new double[n];//recursivo
@@ -234,32 +234,32 @@ public class AA20201 {
 
 
 
-        for (int j = 0; j < n; j++){
-            b.calcularTFiboR(n);//recursivo
-            tiempos[j] = (int) b.gettTotal();
+        for (int j = 1; j <=n; j++){
+            b.calcularTFiboR(j);//recursivo
+            tiempos[j-1] = (int) b.gettTotal();
             System.out.println();
         }  
-        for (int j = 0; j < n; j++){
-            b2.calcularTFiboRD(n);//recursivo dinamico
-            tiempos2[j] = (int) b2.gettTotal();
+        for (int j = 1; j <=n; j++){
+            b2.calcularTFiboRD(j);//recursivo dinamico
+            tiempos2[j-1] = (int) b2.gettTotal();
             System.out.println();
         }  
-        for (int j = 0; j < n; j++){
-            b3.calcularTFiboR(n);//recursivo
-            tiempos3[j] = (int) b3.gettTotal();
+        for (int j = 1; j <=n; j++){
+            b3.calcularTFiboNR(j);//Iterativo
+            tiempos3[j-1] = (int) b3.gettTotal();
             System.out.println();
         }  
-        for (int j = 0; j < n; j++){
-            b4.calcularTFiboRD(n);//recursivo dinamico
-            tiempos4[j] = (int) b4.gettTotal();
+        for (int j = 1; j <=n; j++){
+            b4.calcularTFiboNRD(j);//Iterativo D
+            tiempos4[j-1] = (int) b4.gettTotal();
             System.out.println();
         }         
         System.out.println();
         Grafica g1 = new Grafica("N","Tiempo","Tiempos");
         g1.agregarSerie("Recursivo",tiempos);//recursivo
         g1.agregarSerie("Recursivo D",tiempos2);//recursivoDinamico
-        g1.agregarSerie("Iterativo",tiempos3);//recursivo
-        g1.agregarSerie("Iterativo D",tiempos4);//recursivoDinamico
+        g1.agregarSerie("Iterativo",tiempos3);//Iterativo
+        g1.agregarSerie("Iterativo D",tiempos4);//Iterativo D
         g1.crearGrafica();
         g1.muestraGrafica();
         
