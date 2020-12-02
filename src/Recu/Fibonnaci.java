@@ -7,7 +7,7 @@ package Recu;
 
 /**
  *
- * @author yeyos_000
+ * @author Asuka
  */
 public class Fibonnaci {
     private int enteros;

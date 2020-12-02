@@ -9,7 +9,7 @@ import java.util.Random;
 
 /**
  *
- * @author JD
+ * @author Asuka
  */
 public class GeneradorDatos {
     

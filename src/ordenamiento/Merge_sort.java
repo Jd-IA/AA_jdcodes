@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 /**
  *
- * @author yeyos_000
+ * @author Asuka
  */
 public class Merge_sort {
            

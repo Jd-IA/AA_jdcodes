@@ -5,12 +5,17 @@
  */
 package aa20201;
 
+import Mochiila.Articulo;
+import Mochiila.LeerData;
 import aa20201.data.Grafica;
 import busquedas.BusquedaSecuencial;
 import busquedas.GeneradorDatos;
 import busquedas.Busquedas;
 import ordenamiento.Burbuja;
 import Recu.Fibonnaci;
+import TSP.AlgoritmoDijkstra;
+import TSP.Camino;
+import java.util.ArrayList;
 import java.util.Arrays;
 import ordenamiento.BurbujaOp;
 import ordenamiento.Insert_sort;
@@ -217,53 +222,75 @@ public class AA20201 {
         g1.agregarSerie("Quicksort",tiempos5);
         g1.crearGrafica();
         g1.muestraGrafica();*/
+//        MAIN PARA LA COMPARACIÓN DE LOS METODOS DE ORDENAMIENTO
+//        int n = 40;
+//
+//
+//        double[] tiempos = new double[n];//recursivo
+//        double[] tiempos2 = new double[n];//recursivodinamico
+//        double[] tiempos3 = new double[n];//Iterativo
+//        double[] tiempos4 = new double[n];//iterativodinammico
+//
+//
+//        Fibonnaci b = new Fibonnaci ();
+//        Fibonnaci b2 = new Fibonnaci ();
+//        Fibonnaci b3 = new Fibonnaci ();
+//        Fibonnaci b4 = new Fibonnaci ();
+//
+//
+//
+//        for (int j = 1; j <=n; j++){
+//            b.calcularTFiboR(j);//recursivo
+//            tiempos[j-1] = (int) b.gettTotal();
+//            System.out.println();
+//        }  
+//        for (int j = 1; j <=n; j++){
+//            b2.calcularTFiboRD(j);//recursivo dinamico
+//            tiempos2[j-1] = (int) b2.gettTotal();
+//            System.out.println();
+//        }  
+//        for (int j = 1; j <=n; j++){
+//            b3.calcularTFiboNR(j);//Iterativo
+//            tiempos3[j-1] = (int) b3.gettTotal();
+//            System.out.println();
+//        }  
+//        for (int j = 1; j <=n; j++){
+//            b4.calcularTFiboNRD(j);//Iterativo D
+//            tiempos4[j-1] = (int) b4.gettTotal();
+//            System.out.println();
+//        }         
+//        System.out.println();
+//        Grafica g1 = new Grafica("N","Tiempo","Tiempos");
+//        g1.agregarSerie("Recursivo",tiempos);//recursivo
+//        g1.agregarSerie("Recursivo D",tiempos2);//recursivoDinamico
+//        g1.agregarSerie("Iterativo",tiempos3);//Iterativo
+//        g1.agregarSerie("Iterativo D",tiempos4);//Iterativo D
+//        g1.crearGrafica();
+//        g1.muestraGrafica();
         
-        int n = 30;
+//            IMPLEMENTACION DEL TSP
+//        AlgoritmoDijkstra aux;
+//        for (int x=0 ; x < 5;x++){
+//        aux = new AlgoritmoDijkstra(5);
+//        Camino c = aux.buscarCamino(x);
+//        System.out.println("Ciudad= "+x+" Distancia: "+c.getDistanciaRecorrida());        
+//        }   
+
+//        Minima Distancia 
+        /**distancias 
+        (2.4,5.6,3)   (5,6,3) d1:
+        (1,2) (6.7,7.8)  d2:
+        **/
+        //Patron p1 = new Patron("", "", new double[]{1,2});
+        //Patron p2 = new Patron("", "", new double[]{6.7,7.8});
+        //System.out.println(p2.calcularDistancia(p1)); 
+//        
+//        ArrayList<Articulo> instancias = LeerData.tokenizarDataSet();
+//        ArrayList<Articulo>  promedios= new ArrayList<>();
+//        ArrayList<Articulo>  nombres= new ArrayList<>();
 
 
-        double[] tiempos = new double[n];//recursivo
-        double[] tiempos2 = new double[n];//recursivodinamico
-        double[] tiempos3 = new double[n];//Iterativo
-        double[] tiempos4 = new double[n];//iterativodinammico
 
-
-        Fibonnaci b = new Fibonnaci ();
-        Fibonnaci b2 = new Fibonnaci ();
-        Fibonnaci b3 = new Fibonnaci ();
-        Fibonnaci b4 = new Fibonnaci ();
-
-
-
-        for (int j = 1; j <=n; j++){
-            b.calcularTFiboR(j);//recursivo
-            tiempos[j-1] = (int) b.gettTotal();
-            System.out.println();
-        }  
-        for (int j = 1; j <=n; j++){
-            b2.calcularTFiboRD(j);//recursivo dinamico
-            tiempos2[j-1] = (int) b2.gettTotal();
-            System.out.println();
-        }  
-        for (int j = 1; j <=n; j++){
-            b3.calcularTFiboNR(j);//Iterativo
-            tiempos3[j-1] = (int) b3.gettTotal();
-            System.out.println();
-        }  
-        for (int j = 1; j <=n; j++){
-            b4.calcularTFiboNRD(j);//Iterativo D
-            tiempos4[j-1] = (int) b4.gettTotal();
-            System.out.println();
-        }         
-        System.out.println();
-        Grafica g1 = new Grafica("N","Tiempo","Tiempos");
-        g1.agregarSerie("Recursivo",tiempos);//recursivo
-        g1.agregarSerie("Recursivo D",tiempos2);//recursivoDinamico
-        g1.agregarSerie("Iterativo",tiempos3);//Iterativo
-        g1.agregarSerie("Iterativo D",tiempos4);//Iterativo D
-        g1.crearGrafica();
-        g1.muestraGrafica();
-        
-
-    }
     
+    }
 }

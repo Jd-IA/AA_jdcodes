@@ -7,7 +7,7 @@ package busquedas;
 
 /**
  *
- * @author JD
+ * @author Asuka
  */
 public class Busquedas {
     

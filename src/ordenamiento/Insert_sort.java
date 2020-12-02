@@ -7,7 +7,7 @@ package ordenamiento;
 
 /**
  *
- * @author yeyos_000
+ * @author Asuka
  */
 public class Insert_sort {
     

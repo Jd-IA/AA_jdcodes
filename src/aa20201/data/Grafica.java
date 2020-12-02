@@ -18,7 +18,7 @@ import org.jfree.data.xy.XYSeriesCollection;
 
 /**
  *
- * @author working
+ * @author Asuka
  */
 public class Grafica {
     

@@ -9,7 +9,7 @@ import busquedas.Busquedas;
 
 /**
  *
- * @author working
+ * @author Asuka
  */
 public class BusquedaSecuencial {
     

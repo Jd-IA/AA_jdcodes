@@ -7,7 +7,7 @@ package ordenamiento;
 
 /**
  *
- * @author working
+ * @author Asuka
  */
 public class Burbuja {
      
