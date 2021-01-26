@@ -5,8 +5,8 @@
  */
 package aa20201;
 
-import Mochiila.Articulo;
-import Mochiila.LeerData;
+import Monedas.Cmonedas;
+import static Monedas.Cmonedas.cambioR;
 import aa20201.data.Grafica;
 import busquedas.BusquedaSecuencial;
 import busquedas.GeneradorDatos;
@@ -289,8 +289,17 @@ public class AA20201 {
 //        ArrayList<Articulo>  promedios= new ArrayList<>();
 //        ArrayList<Articulo>  nombres= new ArrayList<>();
 
+//Cambio de monedas         
 
-
+        //System.out.println(""+Cmonedas.darCambio(16,new int[]{0,1,6,10}));
+        
+        
+         int monedas[]={1,5,10};
+         int m=monedas.length;
+         int n=12;
+         
+         int combinaciones= cambioR(monedas,m,n);
+         System.out.println("Combinaciones: "+combinaciones);
     
     }
 }
